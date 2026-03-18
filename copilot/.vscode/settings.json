@@ -1,0 +1,41 @@
+{
+  // ── Copilot ────────────────────────────────────────────────────────────
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "github.copilot.chat.organizationCustomAgents.enabled": true,
+  "chat.promptFiles": true,
+
+  // ── Python ─────────────────────────────────────────────────────────────
+  "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestArgs": ["tests", "-v", "--tb=short"],
+
+  // ── Formatting & linting ───────────────────────────────────────────────
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "ruff.enable": true,
+  "ruff.organizeImports": true,
+  "mypy-type-checker.enabled": true,
+
+  // ── File exclusions ────────────────────────────────────────────────────
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.mypy_cache": true,
+    "**/.pytest_cache": true,
+    "**/.ruff_cache": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/*.egg-info": true
+  },
+  "search.exclude": {
+    "**/.venv": true,
+    "**/dist": true
+  }
+}
